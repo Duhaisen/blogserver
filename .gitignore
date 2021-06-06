@@ -61,5 +61,5 @@ build/
 
 application-test.yml
 */application-test.yml
-**/application-test.yml
+/**/application-test.yml
 
