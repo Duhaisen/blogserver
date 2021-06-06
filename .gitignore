@@ -59,7 +59,9 @@ build/
 .log/
 
 
-application-test.yml
-*/application-test.yml
 /**/application-test.yml
 
+
+login/src/main/resources/applicaion-test.yml
+
+lottery/src/main/resources/applicaion-test.yml
