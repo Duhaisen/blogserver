@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.sen</groupId>
+    <artifactId>blogserver</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>login</module>
+        <module>lottery</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+        <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
+        <alibaba.cloud.version>2.2.5.RELEASE</alibaba.cloud.version>
+        <mysql-connector.version>8.0.19</mysql-connector.version>
+        <apache.commons.version>3.8</apache.commons.version>
+
+
+        <durid.version>1.2.5</durid.version>
+        <seata.version>2.2.0.RELEASE</seata.version>
+
+        <fastjson.version>1.2.70</fastjson.version>
+
+        <dubbo.version>2.7.8</dubbo.version>
+        <curator.version>2.8.0</curator.version>
+        <jsonrpc4j.version>1.2.0</jsonrpc4j.version>
+        <junit.version>4.10</junit.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <!-- Management for mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- commons-lang -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.version}</version>
+            </dependency>
+
+            <!--<dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.14</version>
+            </dependency>-->
+
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+
+            <!-- <dependency>
+                 <groupId>org.apache.dubbo</groupId>
+                 <artifactId>dubbo-spring-boot-starter</artifactId>
+                 <version>${dubbo.version}</version>
+                 <exclusions>
+                     <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-log4j12</artifactId>
+                     </exclusion>
+                 </exclusions>
+             </dependency>
+             <dependency>
+                 <groupId>org.apache.curator</groupId>
+                 <artifactId>curator-recipes</artifactId>
+                 <version>${curator.version}</version>
+             </dependency>
+
+             <dependency>
+                 <groupId>com.github.briandilley.jsonrpc4j</groupId>
+                 <artifactId>jsonrpc4j</artifactId>
+                 <version>${jsonrpc4j.version}</version>
+             </dependency>
+
+             &lt;!&ndash; jsonrpc4j依赖的包 &ndash;&gt;
+             <dependency>
+                 <groupId>junit</groupId>
+                 <artifactId>junit</artifactId>
+                 <version>${java.version}</version>
+             </dependency>-->
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
