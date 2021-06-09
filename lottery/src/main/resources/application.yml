@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: lottery
+  profiles: test
+
+logging:
+  config: classpath:log4j2-spring.xml
+application:
+  charset: UTF-8
+
+cp:
+  history:
+    max-page: 71
+    url-without-page: https://webapi.sporttery.cn/gateway/lottery/getHistoryPageListV1.qry?gameNo=85&provinceId=0&pageSize=30&isVerify=1&pageNo=
+    url: https://webapi.sporttery.cn/gateway/lottery/getHistoryPageListV1.qry?gameNo=85&provinceId=0&isVerify=1&termLimits=30
+
+dubbo:
+  scan:
+    base-packages: org.sen.*
